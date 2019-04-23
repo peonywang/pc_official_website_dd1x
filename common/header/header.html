@@ -1,0 +1,19 @@
+<div id="header">
+    <div class="w">
+        <a class="logo" href="/"><img src="/common/img/footerlogo.png" alt="logo"></a>
+        <ul class="nav">
+            <li name="home"><a href="/">首页</a></li>
+            <li name="news"><a href="/news">资讯动态</a></li>
+            <li name="about"><a href="/about">关于我们</a></li>
+        </ul>
+        <div class="more">&#xe625;</div>
+    </div>
+</div>
+<script>
+    $(function () {
+        // 移动端更多菜单展开
+        $("#header .more").click(function () {
+            $(this).siblings(".nav").toggleClass("show");
+        })
+    })
+</script>

@@ -1,0 +1,282 @@
+@charset "UTF-8";
+body{color: #393939;font-family:"Arial","Microsoft YaHei","黑体","宋体",sans-serif;}
+.green{color: #2eda8b;}
+/* 公共头部 */
+#header {
+    background: #393939;
+    padding: 1em;
+}
+
+#header .w {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+#header .logo {
+    height: 2.3em;
+}
+
+#header .logo img {
+    height: 100%;
+    display: block;
+}
+
+#header .nav {
+    display: flex;
+    align-items: center;
+}
+
+#header .nav a {
+    color: #FFF;
+    line-height: 1.5;
+    display: block;
+}
+
+@media screen and (min-width: 750px) {
+    #header .nav {
+        flex: 1;
+        justify-content: flex-end;
+    }
+
+    #header .nav li {
+        border-bottom: 2px solid #393939;
+        transition: all .3s;
+    }
+
+    #header .more {
+        display: none;
+    }
+
+    #header .nav li.act, #header .nav li:hover {
+        border-bottom: 2px solid #15d47d;
+    }
+
+    #header .nav li + li {
+        margin-left: 3em;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    #header .nav {
+        min-width: 2em;
+        height: 1em;
+        position: absolute;
+        right: 0;
+        flex-direction: column;
+        top: 2em;
+        text-align: center;
+        z-index: 1;
+    }
+
+    #header .nav li {
+        display: none;
+    }
+
+    #header .nav li a {
+        padding: 0 1em;
+        line-height: 2;
+        color: #FFF;
+    }
+
+    #header .nav.show li {
+        display: block;
+        background: #FFF;
+        border: 1px solid rgba(64, 158, 255, .2);
+        width: 100%;
+    }
+
+    #header .nav.show li a {
+        color: #409eff;
+    }
+
+    #header .nav li.act {
+        display: block;
+        position: absolute;
+        right: 3em;
+        width: auto;
+        white-space: nowrap;
+        top: -1.8em;
+        background: none;
+        border: none;
+    }
+
+    #header .nav li.act a {
+        color: #FFF;
+    }
+
+    #header .more {
+        font-family: "iconfont" !important;
+        color: #FFF;
+        font-size: 1.5em;
+        display: block;
+        position: relative;
+        z-index: 1;
+    }
+}
+
+/* end 公共头部 */
+
+/* 公共底部 */
+#footer {
+    background: #393939;
+    padding: 5em 1em 0;
+    color: #FFF;
+}
+
+#footer a {
+    color: #FFF;
+}
+
+#footer .w {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .about {
+}
+
+#footer .about h4 {
+    font-size: 1.8em;
+    letter-spacing: 1px;
+    margin-bottom: 1em;
+}
+
+#footer .about .d1 a {
+    display: block;
+    font-size: 1.2em;
+    line-height: 2;
+}
+
+#footer .about .d1 a:hover{
+    text-decoration: underline;
+}
+#footer .logoD {
+    /* font-size: 1em; */
+    flex-shrink: 1;
+}
+
+#footer .logoD .d1 {
+    display: flex;
+    align-items: flex-end;
+}
+
+#footer .logoD .logo {
+    width: 9em;
+    /* height: 8em; */
+    margin-right: 20px;
+}
+
+#footer .logoD h4 {
+    font-size: 1.5em;
+    line-height: 2;
+}
+
+#footer .logoD .d1 {
+    color: #C2C2C2;
+    margin-bottom: 2.5em;
+}
+
+#footer .erwD {
+    display: flex;
+    text-align: center;
+    font-size: 1em;
+    justify-content: flex-end;
+    line-height: 1.4;
+}
+
+#footer .erwD li + li {
+    margin-left: 20%;
+}
+
+#footer .erwD .i1 {width: 9em;/* height: 8em; */margin-bottom: 1em;}
+#footer .copyright{text-align: center;font-size: .9em;opacity: .5;margin-top: 5em;line-height: 4;border-top: 1px solid rgba(255,255,255,.5);}
+#footer .mobile{
+    text-align: center;
+    font-size: 1.3em;
+    display: none;
+}
+#footer .mobile .p1{
+    font-size: 1em;
+    line-height: 1.8;
+}
+#footer .mobile .btn{
+    background: #2eda8b;
+    color: #2A2A2A;
+    line-height: 3.1;
+    display: block;
+    width: 80vw;
+    margin: 0.5em auto 1em;
+    font-size: 1.1em;
+    border-radius: 2em;
+    border-bottom: 3px solid rgba(13,106,61,0.52);
+}
+#footer .logoD2 a,
+#footer .logoD2{
+    color: #C3C3C3;
+}
+#footer .logoD2 img{
+    height: 1.5em;
+    margin-bottom: 0.5em;
+}
+#footer .logoD2 p,
+#footer .logoD2 p a{
+    font-size: 12px;
+}
+@media screen and (max-width: 1100px){
+    #footer{
+        font-size: .9em;
+    }
+}
+@media screen and (max-width: 1000px){
+    #footer{
+        font-size: .8em;
+    }
+}
+@media screen and (max-width: 890px){
+    #footer{
+        font-size: .7em;
+    }
+}
+@media screen and (max-width: 750px){
+    #footer{
+        padding-top:2em;
+    }
+    #footer > .w{
+        display: none;
+    }
+    #footer .mobile{
+        display: block;
+    }
+    #footer .copyright{
+        font-size: .8em;
+        margin-top: 2em;
+        line-height: 1.5;
+        padding: 1.5em 0;
+    }
+}
+
+/*面包屑*/
+.breadcrumb{
+    margin-top: 1em;
+    margin-bottom: .5em;
+    font-size: 1.2em;
+    color: #9F9F9F;
+    padding:0 1em;
+}
+.breadcrumb li{ display: inline-block;}
+
+.breadcrumb li + li:before {
+    content: '>';
+    margin: 0 0.5em;
+}
+.breadcrumb li a{
+    color: #00D972;
+    text-decoration: underline;
+}
+@media screen and (max-width: 750px) {
+    .breadcrumb{
+        font-size: .9em;
+    }
+}
